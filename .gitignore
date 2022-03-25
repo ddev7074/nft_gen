@@ -1,0 +1,7 @@
+__pycache__
+.vscode
+images_done
+metadata_done
+images
+metadata
+.env
