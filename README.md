@@ -5,6 +5,7 @@
 Переименовать файл `.env.example` в `.env`, указать `<TOKEN>` из Pinata
 
 ```
+$ pip install poetry
 $ make install
 ```
 
