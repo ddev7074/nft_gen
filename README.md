@@ -5,18 +5,18 @@
 Переименовать файл `.env.example` в `.env`, указать `<TOKEN>` из Pinata
 
 ```
-$ pip install poetry
-$ make install
+pip install poetry
+make install
 ```
 
 ## Сгененрировать картинки
 
 ```
-$ make images
+make images
 ```
 
 ## Перегенерировать метаданные
 
 ```
-$ make metadata
+make metadata
 ```
