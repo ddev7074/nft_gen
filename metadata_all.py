@@ -2,7 +2,8 @@
 import json
 import os
 
-# os.mkdir(f"./metadata")
+if not os.path.exists("./metadata"):
+    os.makedirs("./metadata")
 
 METADATA_FILE_NAME = "./metadata/all-traits.json"
 

@@ -8,7 +8,8 @@ from tqdm import tqdm
 from generator import TOTAL_IMAGES
 from gistfile import *
 
-# os.mkdir(f"./images")
+if not os.path.exists("./images"):
+    os.makedirs("./images")
 
 layers_path = "layers"
 layers = {
