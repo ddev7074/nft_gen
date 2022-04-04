@@ -5,6 +5,7 @@ from multiprocessing import Pool
 from PIL import Image
 from tqdm import tqdm
 
+from generator import TOTAL_IMAGES
 from gistfile import *
 
 # os.mkdir(f"./images")
@@ -60,7 +61,7 @@ def generate_image(item):
 
 def generate_images_in_pool(all_images):
     with Pool(processes=4) as p:
-        max_ = 11000
+        max_ = TOTAL_IMAGES
         with tqdm(total=max_) as pbar:
             for i, _ in enumerate(p.imap_unordered(generate_image, all_images)):
                 pbar.update()

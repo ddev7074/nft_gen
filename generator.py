@@ -1,6 +1,7 @@
+import os
 import random
 
-TOTAL_IMAGES = 11000
+TOTAL_IMAGES = os.environ.get("TOTAL_IMAGES", 100)
 
 all_images = []
 

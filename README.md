@@ -2,6 +2,8 @@
 
 ## Начало работы
 
+Переименовать файл `.env.example` в `.env`, указать `<TOKEN>` из Pinata
+
 ```
 $ make install
 ```
