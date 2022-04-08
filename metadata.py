@@ -4,7 +4,7 @@ import os
 
 from metadata_model import AttributeModel, MetadataModel
 
-IMAGES_BASE_URL = os.environ["IMAGES_BASE_URL"]
+IMAGES_BASE_URL = os.environ.get("IMAGES_BASE_URL", "ipfs://<TOKEN>/")
 PROJECT_NAME = "HiddenBeauty"
 
 

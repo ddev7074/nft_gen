@@ -5,7 +5,7 @@ import os
 if not os.path.exists("./metadata"):
     os.makedirs("./metadata")
 
-METADATA_FILE_NAME = "./metadata/all-traits.json"
+METADATA_FILE_NAME = "./all-traits.json"
 
 
 def generate_metadata_all(all_images):
