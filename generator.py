@@ -1,7 +1,7 @@
 import os
 import random
 
-TOTAL_IMAGES = os.environ.get("TOTAL_IMAGES", 100)
+TOTAL_IMAGES = os.environ.get("TOTAL_IMAGES", 10)
 
 all_images = []
 
@@ -49,9 +49,11 @@ def create_new_rare_image():
 
 # Generate the unique combinations based on trait weightings
 for i in range(TOTAL_IMAGES):
-    create_image_func, path = random.choices(
-        [(create_new_image, "01"), (create_new_rare_image, "02")], [80, 20]
-    )[0]
+    # create_image_func, path = random.choices(
+    #     [(create_new_image, "01"), (create_new_rare_image, "02")], [80, 20]
+    # )[0]
+    create_image_func = create_new_image
+    path = "layers"
     new_trait_image = create_image_func()
     new_trait_image["path"] = path
 

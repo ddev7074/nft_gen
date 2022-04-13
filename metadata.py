@@ -10,7 +10,7 @@ PROJECT_NAME = "HiddenBeauty"
 
 def generate_metadata():
     timestamp = datetime.datetime.utcnow().timestamp()
-    with open("./all-traits.json") as f:
+    with open("./metadata/all-traits.json") as f:
         data = json.load(f)
         for row in data:
             token_id = row["tokenId"]

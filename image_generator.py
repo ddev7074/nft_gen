@@ -38,6 +38,19 @@ layers = {
         ("Lips", "09_lips_"),
         ("Flowers", "10_flowers_"),
     ],
+    "layers": [
+        ("Background", "00_background_"),
+        ("Body", "01_body_"),
+        ("Left Strand", "02_left-strand_"),
+        ("Face", "03_face_"),
+        ("Right Strand", "04_right-strand_"),
+        ("Left Eye", "05_left-eye_"),
+        ("Nose", "06_nose_"),
+        ("Right Eye", "07_right-eye_"),
+        ("Print", "08_print_"),
+        ("Lips", "09_lips_"),
+        ("Flowers", "10_flowers_"),
+    ],
 }
 
 
@@ -51,7 +64,7 @@ def generate_image(item):
     for layer, file_name in layers[item["path"]]:
         if item[layer]:
             image = Image.open(
-                f"{layers_path}/{item['path']}/{file_name}{item[layer]:02d}.png"
+                f"{layers_path}/{file_name}{item[layer]:02d}.png"
             ).convert("RGBA")
             last_image = Image.alpha_composite(last_image, image)
 
