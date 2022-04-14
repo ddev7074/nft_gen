@@ -8,6 +8,8 @@ from tqdm import tqdm
 from generator import TOTAL_IMAGES
 from gistfile import *
 
+from FileWorker import layer_file_name
+from FileWorker import  layer_ranges
 if not os.path.exists("./images"):
     os.makedirs("./images")
 
@@ -61,10 +63,10 @@ def generate_images(all_images):
 
 def generate_image(item):
     last_image = Image.new("RGBA", (2000, 2000))
-    for layer, file_name in layers[item["path"]]:
+    for layer in layer_file_name:
         if item[layer]:
             image = Image.open(
-                f"{layers_path}/{file_name}{item[layer]:02d}.png"
+                f"{layers_path}/{layer_file_name[layer]}{layer_ranges[layer][(item[layer])]}.png"
             ).convert("RGBA")
             last_image = Image.alpha_composite(last_image, image)
 
