@@ -13,7 +13,7 @@ def create_new_generic_image():
     new_image = {}
 
     for layer_name in layer_ranges:
-        new_image[layer_name] = random.choices(range(0, len(layer_ranges[layer_name]) - 1))[0] #generate random index
+        new_image[layer_name] = random.choices(range(0, len(layer_ranges[layer_name]) - 1))[0] #gen random index of modification
 
     if new_image in all_images:
         return create_new_generic_image()
