@@ -7,6 +7,7 @@ from generator import all_images
 from image_generator import generate_images_in_pool
 from metadata import generate_metadata
 from metadata_all import generate_metadata_all
+from FileWorker import validate_file_names
 
 
 # Returns true if all images are unique
@@ -16,6 +17,7 @@ def all_images_unique(all_images):
 
 
 def main():
+
     print("Are all images unique?", all_images_unique(all_images))
     # Add token Id to each image
     i = 0

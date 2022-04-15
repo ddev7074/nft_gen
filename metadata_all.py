@@ -15,8 +15,8 @@ def generate_metadata_all(all_images):
         # replace indexes with modifiation itself and replace '-' to '_' in modifcation name
         for layer in layer_ranges:
             image[layer] = str(layer_ranges[layer][image[layer]]).replace("-","_")
-            if str(layer).find("-"):
-                image[str(layer).replace("-","_")] = image.pop(layer)
+            # if str(layer).find("-"):
+            #     image[str(layer).replace("-","_")] = image.pop(layer)
 
 
 

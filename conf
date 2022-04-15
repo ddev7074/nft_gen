@@ -1,0 +1,8 @@
+{
+"PROCESSES":4,
+"SRC_PATH":"./layers",
+"TOTAL_IMAGES":5,
+"IMAGES_BASE_URL":"ipfs://<TOKEN>/",
+"SIZE_W":1140,
+"SIZE_H":1140
+}

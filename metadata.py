@@ -3,8 +3,10 @@ import json
 import os
 
 from metadata_model import AttributeModel, MetadataModel
+from FileWorker import conf
 
-IMAGES_BASE_URL = os.environ.get("IMAGES_BASE_URL", "ipfs://<TOKEN>/")
+# IMAGES_BASE_URL = os.environ.get("IMAGES_BASE_URL", "ipfs://<TOKEN>/")
+IMAGES_BASE_URL = conf["IMAGES_BASE_URL"]
 PROJECT_NAME = "HiddenBeauty"
 
 

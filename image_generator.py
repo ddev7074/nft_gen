@@ -8,8 +8,8 @@ from tqdm import tqdm
 from generator import TOTAL_IMAGES
 from gistfile import *
 
-from FileWorker import layer_file_name
-from FileWorker import  layer_ranges
+from FileWorker import layer_file_name, layer_ranges, conf
+
 if not os.path.exists("./images"):
     os.makedirs("./images")
 
@@ -62,7 +62,9 @@ def generate_images(all_images):
 
 
 def generate_image(item):
-    last_image = Image.new("RGBA", (2000, 2000))
+    width = conf["SIZE_W"]
+    height = conf["SIZE_H"]
+    last_image = Image.new("RGBA", (width, height))
     for layer in layer_file_name:
         if item[layer]:
             image = Image.open(
@@ -76,7 +78,7 @@ def generate_image(item):
 
 
 def generate_images_in_pool(all_images):
-    with Pool(processes=4) as p:
+    with Pool(processes=conf["PROCESSES"]) as p:
         max_ = TOTAL_IMAGES
         with tqdm(total=max_) as pbar:
             for i, _ in enumerate(p.imap_unordered(generate_image, all_images)):
