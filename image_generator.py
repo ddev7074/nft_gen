@@ -66,11 +66,11 @@ def generate_image(item):
     height = conf["SIZE_H"]
     last_image = Image.new("RGBA", (width, height))
     for layer in layer_file_name:
-        if item[layer]:
-            image = Image.open(
-                f"{layers_path}/{layer_file_name[layer]}{layer_ranges[layer][(item[layer])]}.png"
-            ).convert("RGBA")
-            last_image = Image.alpha_composite(last_image, image)
+        # if item[layer]: ??????
+        image = Image.open(
+            f"{layers_path}/{layer_file_name[layer]}{layer_ranges[layer][(item[layer])]}.png"
+        ).convert("RGBA")
+        last_image = Image.alpha_composite(last_image, image)
 
     rgb_im = last_image.convert("RGB")
     file_name = str(item["tokenId"]) + ".png"
