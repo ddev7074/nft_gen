@@ -7,7 +7,7 @@ from FileWorker import conf
 
 # IMAGES_BASE_URL = os.environ.get("IMAGES_BASE_URL", "ipfs://<TOKEN>/")
 IMAGES_BASE_URL = conf["IMAGES_BASE_URL"]
-PROJECT_NAME = "HiddenBeauty"
+PROJECT_NAME = conf["PROJECT_NAME"]
 
 
 def generate_metadata():
@@ -19,7 +19,7 @@ def generate_metadata():
             token = MetadataModel(
                 image=f"{IMAGES_BASE_URL}{token_id}.png",
                 name=f"{PROJECT_NAME} #{token_id}",
-                description="""A collection of 10.000 art objects "My beauty is hidden from you". We say "I don't have to show you my beauty". "My eye is where I want it," says Picasso. The eye is something that still needs to be released.""",
+                description=conf["PROJECT_DESC"],
                 edition=token_id,
                 date=int(timestamp),
                 attributes=[
