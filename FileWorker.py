@@ -1,3 +1,4 @@
+import os
 from os import listdir
 from os.path import isfile, join
 import re
@@ -45,6 +46,15 @@ def validate_file_names(path):
             else:
                 layer_name_nr[layer_name] = layer_nr
     return retval
+
+def prepare_file_info(path):
+    files = list_images(path)
+    token_full_path = {}
+    for file in files:
+        token_id = re.split('\\.', file)
+        full_path = os.path.abspath(file)
+        token_full_path[token_id[0]] = str(full_path)
+    return token_full_path
 
 #load configuration
 with open("./conf") as f:

@@ -1,10 +1,17 @@
 {
 "PROJECT_NAME":"HiddenBeauty",
-"PROJECT_DESC":"A collection of 10.000 art objects \"My beauty is hidden from you\". We say \"I don't have to show you my beauty\". \"My eye is where I want it,\" says Picasso. The eye is something that still needs to be released.",
+"PROJECT_DESC":"This is my first NFT.",
+"COLLECTION": "ElonA Musk Collection",
 "PROCESSES":4,
 "SRC_PATH":"./layers",
-"TOTAL_IMAGES":20,
+"TOTAL_IMAGES":5,
 "IMAGES_BASE_URL":"ipfs://<TOKEN>/",
 "SIZE_W":1140,
-"SIZE_H":1140
+"SIZE_H":1140,
+"LEVELS": "",
+"STATS": "",
+"UNLOCKABLE_CONTENT": false,
+"EXPLICIT_AND_SENSITIVE_CONTENT": false,
+"SUPPLY": 1,
+"BLOCKCHAIN": "Ethereum"
 }
