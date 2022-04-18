@@ -52,7 +52,7 @@ def prepare_file_info(path):
     token_full_path = {}
     for file in files:
         token_id = re.split('\\.', file)
-        full_path = os.path.abspath(file)
+        full_path = os.path.abspath(join(path, file))
         token_full_path[token_id[0]] = str(full_path)
     return token_full_path
 
