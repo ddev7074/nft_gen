@@ -8,10 +8,12 @@
 "IMAGES_BASE_URL":"ipfs://<TOKEN>/",
 "SIZE_W":1140,
 "SIZE_H":1140,
-"LEVELS": "",
-"STATS": "",
+"EXTERNAL_LINK":" ",
+"LEVELS": " ",
+"STATS": " ",
 "UNLOCKABLE_CONTENT": false,
 "EXPLICIT_AND_SENSITIVE_CONTENT": false,
 "SUPPLY": 1,
 "BLOCKCHAIN": "Ethereum"
+
 }
