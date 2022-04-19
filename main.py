@@ -15,18 +15,31 @@ def all_images_unique(all_images):
     seen = list()
     return not any(i in seen or seen.append(i) for i in all_images)
 
+def remove_dublicates(all_images):
+    print("removing duplicates")
+    uniq = list()
+    for i in all_images:
+        if not i in uniq:
+            uniq.append(i)
+    return uniq
 
 def main():
-
-    print("Are all images unique?", all_images_unique(all_images))
+    all_are_uniqe = all_images_unique(all_images)
+    print("Are all images unique?", all_are_uniqe)
+    uniq_images = list()
+    if not all_are_uniqe:
+        uniq_images = remove_dublicates(all_images)
+        print(f"{len(all_images) - len(uniq_images)} images has been removed")
+    else:
+        uniq_images = all_images
     # Add token Id to each image
     i = 0
     for item in all_images:
         item["tokenId"] = i
         i = i + 1
 
-    generate_images_in_pool(all_images)
-    generate_metadata_all(all_images)
+    generate_images_in_pool(uniq_images)
+    generate_metadata_all(uniq_images)
     generate_metadata()
 
 
