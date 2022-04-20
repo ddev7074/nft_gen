@@ -14,6 +14,12 @@
 "UNLOCKABLE_CONTENT": false,
 "EXPLICIT_AND_SENSITIVE_CONTENT": false,
 "SUPPLY": 1,
-"BLOCKCHAIN": "Ethereum"
+"BLOCKCHAIN": "Ethereum",
+"SALE_TYPE": "Fixed Price",
+"PRICE":0.005,
+"METHOD":["Sell to highest bidder", ""],
+"DURATION":["6 months"],
+"SPECIFIC_BUYER":[false],
+"QUANTITY":1
 
 }
